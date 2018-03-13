@@ -1,0 +1,17 @@
+sudo apt-get install cmake coinor-libclp-dev coinor-libcoinutils-dev coinor-libosi-dev doxygen bison flex coinor-libcgl-dev coinor-libcbc-dev
+
+Unzip the planner, then:
+cd planner/src
+./build-instructions.txt
+cd ../debug
+make popf3-clp
+
+In .bashrc:
+-Change as you see fit
+export PATH=$PATH:/home/zeid/workspace/planner/popf-tif-clp/planner/debug/popf
+
+Run: 
+
+popf3-clp bwdomain.pddl bwproblem.pddl
+
+popf3-clp pickNplace-domain.pddl pickNplace-problem.pddl
